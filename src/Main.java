@@ -5,29 +5,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        Gato brisa = new Gato("Brisa", "preto", "GRAND", 12, 4d);
-//        brisa.setGarra("garra pequena");
-//        brisa.setTamanho(Tamanho.PEQUENO);
-//
-//        Gato olivardo = new Gato();
-//        olivardo.setNome("Olivardo");
-//        olivardo.setCor("Laranja");
-//        olivardo.setRaca("Persa");
-//        olivardo.setIdade(5);
-//        olivardo.setPeso(8d);
-//
-//        System.out.println("Priemiro gato");
-//        brisa.imprimirDadosDoGato();
-//        System.out.println();
-//        System.out.println("Segundo gato");
-//        olivardo.imprimirDadosDoGato();
-
-//        Gato brisa = new Gato();
-//        System.out.println(brisa.fazerBarulho());
-//        Leao leaoDeNemeia = new Leao();
-//        System.out.println(leaoDeNemeia.fazerBarulho());
-
-
         String[][] matriz = new String[5][5];
 
 //        linha 0 todas as colunas
@@ -87,28 +64,24 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int contador = 0;
-        String primeiro;
+        String primeiro, segundo = null;
         boolean repita = true;
         do {
             System.out.println("Quem joga primeiro? X ou O");
             primeiro = scan.next();
             if (primeiro.equals("X")){
+                segundo = "O";
                 repita = false;
+                break;
             }
             if (primeiro.equals("O")){
+                segundo = "X";
                 repita = false;
+                break;
             }
 
         }
         while (repita);
-
-        String segundo;
-        if (primeiro == "X"){
-            segundo = "O";
-        }else {
-            segundo = "X";
-        }
-
 
         while (contador < 9) {
 
@@ -132,15 +105,6 @@ public class Main {
                 System.out.println();
             }
             contador++;
-
-
         }
-
-
-
-
-
     }
-
-
 }
